@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iz Med Clinic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <h1>Xisobod</h1>
+    <form id="reportForm" method="POST" action="/submit">
+        <label for="date">Sana:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="time">Vaqt:</label>
+        <input type="time" id="time" name="time" required><br>
+    
+        <label for="GeneralAmount">Ja'mi kassa:</label>
+        <input type="number" id="GeneralAmount" placeholder="0" name="GeneralAmount" min="0" value="0">
+
+        <label for="paymentType1">Miqdor (Naqd) :</label>
+        <input type="number" id="paymentType1" placeholder="0" name="paymentType1" min="0" value="0">
+
+        <label for="paymentType2">Miqdor (QR CODE) :</label>
+        <input type="number" id="paymentType2" placeholder="0" name="paymentType2" min="0" value="0">
+
+        <label for="paymentType3">Miqdor (Terminal) :</label>
+        <input type="number" id="paymentType3" placeholder="0" name="paymentType3" min="0" value="0">
+
+        <label for="paymentType4">Miqdor (Perevod) :</label>
+        <input type="number" id="paymentType4" placeholder="0" name="paymentType4" min="0" value="0">
+
+        <label for="amountTaken">Olingan naqd:</label>
+        <input type="number" id="amountTaken" name="amountTaken" placeholder="0" min="0" value="0" required><br>
+
+        <label for="remainingCash">Kassada qolgan summa:</label>
+        <input type="number" id="remainingCash" name="remainingCash" placeholder="0" min="0" value="0" required><br>
+            
+        <button type="submit">Xisobotni yuvorish</button>
+
+    </form>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
